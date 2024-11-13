@@ -1,13 +1,16 @@
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
 int main() {
-    int year; // Declare the variable year
-    cout << "Enter a year: ";
-    cin >> year;
-    int days = 365 + (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
-    cout << "the number of days in the year " << year << " is " << days << endl;
+	cout << "Calculation of the distance between settlements." << endl;
+	cout << "Enter the output data: \n";
+	double M, d;
 
-    return 0;
+	cout << "Map scale -> ";
+	cin >> M;
+	cout << "Distance between points -> ";
+	cin >> d;
+	cout << "Distance between settlements: " << M * d << " km" << endl;
+
+	return 0;
 }
