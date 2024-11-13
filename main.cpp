@@ -1,13 +1,17 @@
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
 int main() {
-    int year; // Declare the variable year
-    cout << "Enter a year: ";
-    cin >> year;
-    int days = 365 + (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
-    cout << "the number of days in the year " << year << " is " << days << endl;
+	int time, result, hour, minute, second;
+	cout << "Enter the time in sec: ";
+	cin >> time;
+	result = 86400 - time;
+	hour = result / 3600;
+	minute = (result % 3600) / 60;
+	second = result % 60;
 
-    return 0;
+	cout << "Until the end of the day: " << hour << " hours " << minute << " minutes " << second << " seconds" << endl;
+
+	return 0;
 }
+
