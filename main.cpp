@@ -1,13 +1,15 @@
 #include <iostream>
-#include <iomanip>
-using namespace std;
+#include <cmath>  
+#define _USE_MATH_DEFINES
+#include <math.h>
 
 int main() {
-    int year; // Declare the variable year
-    cout << "Enter a year: ";
-    cin >> year;
-    int days = 365 + (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
-    cout << "the number of days in the year " << year << " is " << days << endl;
+    std::cout << "Calculating the volume of a sphere: " << std::endl;
+    double V, R;
+    std::cout << "Enter the radius of the sphere: ";
+    std::cin >> R;
+    V = (4.0 / 3.0) * M_PI * std::pow(R, 3); 
 
+    std::cout << "The volume of the sphere is: " << V << std::endl;
     return 0;
 }
